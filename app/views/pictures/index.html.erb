@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<div class="content_area">
+  <h1>投稿一覧</h1>
+
+  <ul>
+    <% @pictures.each do |picture| %>
+      <li class="content">
+        <p><%= image_tag(picture.image.url, class: 'picture') if picture.image.present? %></p>
+        <div class="flex">
+          <p><%= picture.user.name %>さんの投稿</p>
+          <p><%= picture.content %></p>
+          <p><%= link_to 'Show', picture, class: 'link' %></p>
+          <p><%= link_to 'Edit', edit_picture_path(picture), class: 'link' %></p>
+          <p><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' }, class: 'link' %></p>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

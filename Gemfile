@@ -45,4 +45,6 @@ end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'bcrypt'
+gem 'bcrypt' #ログイン
+gem 'carrierwave'  #画像
+gem 'mini_magick'
