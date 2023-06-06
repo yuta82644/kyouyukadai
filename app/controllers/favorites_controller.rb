@@ -8,3 +8,7 @@ class FavoritesController < ApplicationController
     redirect_to pictures_path, notice: "#{favorite.picture.user.name}さんのブログ解除しました"
   end
 end
+
+# def index
+#   @favotites = current_user.favorites.includes(:picture)
+# end
