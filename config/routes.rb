@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :pictures do
     collection { post :confirm }
   end
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 end

@@ -27,7 +27,7 @@ end
 group :development do
 
   gem 'web-console', '>= 4.1.0'
-
+  gem 'letter_opener_web'
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
 
@@ -48,3 +48,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bcrypt' #ログイン
 gem 'carrierwave'  #画像
 gem 'mini_magick'
+gem 'rexml'
