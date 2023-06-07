@@ -49,3 +49,7 @@ gem 'bcrypt' #ログイン
 gem 'carrierwave'  #画像
 gem 'mini_magick'
 gem 'rexml'
+
+gem 'net-smtp'
+gem 'net-imap'
+gem 'net-pop'
