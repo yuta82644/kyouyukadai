@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'pictures#index'
-  resources :users, only: [:new, :create, :show]
+  resources :users, only: [:new, :create, :show, :edit, :update]
   resources :sessions, only: [:new, :create, :show]
   resources :favorites, only: [:create, :destroy, :index ]
   resources :pictures do
@@ -9,4 +9,3 @@ Rails.application.routes.draw do
     end
   end
 end
-#プロフィール編集機能

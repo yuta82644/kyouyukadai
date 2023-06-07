@@ -1,12 +1,14 @@
-<h1>Sign up</h1>
+
+
+<h1>プロフィール編集</h1>
 
 <% if @user.errors.any? %>
   <div id="error_explanation">
     <h2><%= pluralize(@user.errors.count, "error") %> prohibited this <%= @user.name %> from being saved:</h2>
     <ul>
-    <% @user.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
     </ul>
   </div>
 <% end %>
@@ -24,8 +26,16 @@
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %>
 
-  <%= f.file_field :image %>
-  <%= f.image_tag(@user.image.url) if @user.image && @user.image.url %>
+  <%= f.file_field :image  %>
+  <%# <%= f.image_tag(@user.image.url) if @user.image.file.present? %> 
+  <% if @user.image.file.present? %>
+  <%= image_tag @user.image.url  %>
 
-  <%= f.submit "Create my account" %>
+  <% end %>
+
+
+  <%= f.submit "プロフィールを編集する" %>
+
+  <%= link_to 'Show', @user %> |
+<%= link_to 'Back', user_path %>
 <% end %>

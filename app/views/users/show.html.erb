@@ -1,3 +1,14 @@
 <h1><%= @user.name %>さんのページ</h1>
 
 <p>メアド：<%= @user.email %></p>
+
+
+<% if @user.image.file.present? %>
+
+<p class= "picture">画像：<%= image_tag @user.image.url %></p>
+
+<% else %>
+<p>画像なし</p>
+<% end %>
+
+<p><%= link_to 'Edit', edit_user_path(@user), class: 'link' %></p>

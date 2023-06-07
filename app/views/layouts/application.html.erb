@@ -9,7 +9,11 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+<header>
+<div class="header">
+  <h1 class="main-text">kyouyuu</h1>
+</div>
+</header>
   <body>
     <% flash.each do |key, value| %>
     <%= content_tag(:div,value,class:"#{key}")%>
@@ -28,5 +32,9 @@
 
 
     <%= yield %>
+    <footer>
+ 
+  <p><small>&copy;2023 tunagari </small></p></div>
+  </footer>
   </body>
 </html>
