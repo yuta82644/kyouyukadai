@@ -1,9 +1,9 @@
-class CreatePictures < ActiveRecord::Migration[6.1]
+class CreateUsers < ActiveRecord::Migration[6.1]
   def change
-    create_table :pictures do |t|
-      t.text :content
-      t.text :image
-      t.references :user, null: false, foreign_key: true
+     create_table :users do |t|
+      t.string :name
+      t.string :email
+      t.string :password_digest
 
       t.timestamps
     end
