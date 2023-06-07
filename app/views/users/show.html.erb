@@ -5,10 +5,9 @@
 
 <% if @user.image.file.present? %>
 
-<p class= "picture">画像：<%= image_tag @user.image.url %></p>
-
+  <p class= "picture">画像：<%= image_tag @user.image.url %></p>
 <% else %>
-<p>画像なし</p>
+  <p>画像なし</p>
 <% end %>
 
 <p><%= link_to 'Edit', edit_user_path(@user), class: 'link' %></p>

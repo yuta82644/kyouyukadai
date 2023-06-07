@@ -27,7 +27,7 @@
   <%= f.password_field :password_confirmation %>
 
   <%= f.file_field :image  %>
-  <%# <%= f.image_tag(@user.image.url) if @user.image.file.present? %> 
+ 
   <% if @user.image.file.present? %>
   <%= image_tag @user.image.url  %>
 
