@@ -2,14 +2,21 @@
 
 
 
-
+<% if @favorites.present?%>
+  <ul>
 <% @favorites.each do |favorite| %>
-  <li class="content">
-    <p><%= image_tag(favorite.picture.image.url, class: 'picture') if favorite.picture.image.present? %></p>
-    <div class="flex">
-      <p><%= favorite.picture.user.name %>さんの投稿</p>
-      <p><%= favorite.picture.content %></p>
-      </div>
-  </li>
+    <li class="content">
+      <p><%= image_tag(favorite.picture.image.url, class: 'picture') if favorite.picture.image.present? %></p>
+      <div class="flex">
+        <p><%= favorite.picture.user.name %>さんの投稿</p>
+        <p><%= favorite.picture.content %></p>
+        </div>
+    </li>
+  <% end %>
+  </ul>
+
+  <% else %>
+  <p>お気に入りない</p>
 <% end %>
+
 
